@@ -598,54 +598,66 @@
   }
 
   /* ---------- Slide 10: Resonatia quote ---------- */
-  .quote-over {
+  /* ---------- Resonatia Quote: split ---------- */
+  .quote-split {
     padding: 0;
+    flex-direction: column;
   }
-  .quote-over .overlay {
-    position: absolute;
-    inset: 0;
-    background: rgba(250, 248, 245, 0.96);
-  }
-  .quote-over .quote-box {
-    position: relative;
-    z-index: 2;
+  .quote-split .top-half {
     width: 100%;
-    height: 100%;
-    padding: 10vh 9vw;
-    box-sizing: border-box;
+    height: 50%;
+    background: var(--bg);
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    max-width: 60%;
+    justify-content: flex-end;
+    padding: 0 9vw 4vh;
+    box-sizing: border-box;
   }
-  .quote-over .eyebrow {
+  .quote-split .top-half .eyebrow {
     font-family: var(--mono);
     font-size: 0.55em;
-    color: var(--accent);
+    color: var(--text-secondary);
     letter-spacing: 0.3em;
     text-transform: uppercase;
-    margin-bottom: 2em;
+    margin-bottom: 1.2em;
   }
-  .quote-over blockquote {
+  .quote-split .top-half blockquote {
     font-family: var(--serif);
     font-weight: 300;
     font-style: italic;
-    font-size: 2.6em;
+    font-size: 2.8em;
     line-height: 1.25;
     color: var(--text-primary);
     margin: 0;
     padding: 0;
     border: 0;
   }
-  .quote-over blockquote .q-turn {
-    color: var(--accent);
-  }
-  .quote-over .attribution {
+  .quote-split .top-half .attribution {
     font-family: var(--mono);
-    font-size: 0.7em;
+    font-size: 0.65em;
     color: var(--text-secondary);
     letter-spacing: 0.15em;
-    margin-top: 2em;
+    margin-top: 1em;
+  }
+  .quote-split .bottom-half {
+    width: 100%;
+    height: 50%;
+    background: var(--text-primary);
+    display: flex;
+    align-items: flex-start;
+    padding: 5vh 9vw 0;
+    box-sizing: border-box;
+  }
+  .quote-split .bottom-half blockquote {
+    font-family: var(--serif);
+    font-weight: 400;
+    font-style: italic;
+    font-size: 3.2em;
+    line-height: 1.25;
+    color: var(--bg);
+    margin: 0;
+    padding: 0;
+    border: 0;
   }
 
   /* ---------- Slide 12: Framework ---------- */
@@ -1113,18 +1125,16 @@
   </section>
 
   <!-- ============ SLIDE 10 — RESONATIA QUOTE ============ -->
-  <section class="bleed-section quote-over">
-    <img class="full-bleed" src="resonatia-website.png" alt="Resonatia">
-    <div class="overlay"></div>
-    <div class="quote-box">
-      <div class="eyebrow">Resonatia</div>
-      <blockquote>
-        Reality emerges from relationships.
-      </blockquote>
-      <div class="attribution">&mdash; Iles Wade, Resonatia</div>
-      <blockquote class="q-turn" style="margin-top: 0.6em;">
-        What about the relationship inside ourselves?
-      </blockquote>
+  <section>
+    <div class="quote-split" style="display:flex; flex-direction:column; height:100%;">
+      <div class="top-half">
+        <div class="eyebrow">Resonatia</div>
+        <blockquote>Reality emerges from relationships.</blockquote>
+        <div class="attribution">&mdash; Iles Wade</div>
+      </div>
+      <div class="bottom-half">
+        <blockquote>What about the relationship inside ourselves?</blockquote>
+      </div>
     </div>
   </section>
 
