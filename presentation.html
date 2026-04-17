@@ -1,0 +1,1299 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<title>Four Months Out — Yue Zhou</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&family=IBM+Plex+Mono:wght@300;400;500&family=IBM+Plex+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@5.1.0/dist/reveal.css">
+
+<style>
+  :root {
+    --bg: #faf8f5;
+    --text-primary: #1a1917;
+    --text-secondary: #6b665c;
+    --accent: #c4956a;
+    --border: rgba(196, 149, 106, 0.2);
+    --serif: "Cormorant Garamond", "Times New Roman", serif;
+    --sans: "IBM Plex Sans", -apple-system, BlinkMacSystemFont, sans-serif;
+    --mono: "IBM Plex Mono", ui-monospace, Menlo, monospace;
+  }
+
+  html, body {
+    background: var(--bg);
+    color: var(--text-primary);
+  }
+
+  .reveal {
+    font-family: var(--sans);
+    font-weight: 300;
+    color: var(--text-primary);
+    font-size: 28px;
+    letter-spacing: 0.005em;
+  }
+
+  .reveal .slides {
+    text-align: left;
+  }
+
+  .reveal .slides section {
+    padding: 0;
+    height: 100%;
+  }
+
+  .reveal h1, .reveal h2, .reveal h3, .reveal h4 {
+    font-family: var(--serif);
+    font-weight: 400;
+    text-transform: none;
+    color: var(--text-primary);
+    letter-spacing: -0.01em;
+    line-height: 1.1;
+    margin: 0;
+  }
+
+  .reveal h1 {
+    font-size: 5.5em;
+    font-weight: 300;
+    letter-spacing: -0.02em;
+  }
+
+  .reveal h2 {
+    font-size: 3.2em;
+    font-weight: 300;
+  }
+
+  .reveal h3 {
+    font-size: 2em;
+    font-weight: 400;
+  }
+
+  .reveal p {
+    font-family: var(--sans);
+    font-weight: 300;
+    line-height: 1.55;
+    margin: 0;
+  }
+
+  .reveal em {
+    font-family: var(--serif);
+    font-style: italic;
+    font-weight: 400;
+  }
+
+  .reveal code, .reveal .mono {
+    font-family: var(--mono);
+    font-weight: 400;
+  }
+
+  .reveal ::selection {
+    background: var(--accent);
+    color: var(--bg);
+  }
+
+  /* Remove reveal.js default background flash */
+  .reveal .backgrounds {
+    background: var(--bg);
+  }
+
+  /* ---------- Layout utilities ---------- */
+  .slide-inner {
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+    padding: 8vh 9vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .slide-center {
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+    padding: 8vh 9vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+
+  .full-bleed {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .caption {
+    font-family: var(--sans);
+    font-size: 0.75em;
+    color: var(--text-secondary);
+    text-transform: uppercase;
+    letter-spacing: 0.18em;
+    font-weight: 400;
+  }
+
+  .rule {
+    width: 48px;
+    height: 1px;
+    background: var(--accent);
+    margin: 1.2em 0;
+    border: 0;
+  }
+
+  .folio {
+    position: absolute;
+    left: 9vw;
+    bottom: 5vh;
+    font-family: var(--mono);
+    font-size: 0.55em;
+    color: var(--text-secondary);
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+  }
+
+  .folio-right {
+    position: absolute;
+    right: 9vw;
+    bottom: 5vh;
+    font-family: var(--mono);
+    font-size: 0.55em;
+    color: var(--text-secondary);
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+  }
+
+  /* ---------- Slide 1: Cover ---------- */
+  .cover-slide {
+    align-items: center;
+    text-align: center;
+  }
+  .cover-slide .eyebrow {
+    font-family: var(--mono);
+    font-size: 0.5em;
+    color: var(--text-secondary);
+    letter-spacing: 0.35em;
+    text-transform: uppercase;
+    margin-bottom: 2.5em;
+  }
+  .cover-slide h1 {
+    font-size: 7em;
+    font-weight: 300;
+    font-style: italic;
+    line-height: 1;
+    margin-bottom: 0.6em;
+  }
+  .cover-slide .subtitle {
+    font-family: var(--sans);
+    font-weight: 300;
+    font-size: 0.85em;
+    color: var(--text-secondary);
+    letter-spacing: 0.05em;
+  }
+  .cover-slide .subtitle .name {
+    color: var(--text-primary);
+    font-weight: 400;
+  }
+
+  /* ---------- Slide 1b: Introduction ---------- */
+  .intro-slide {
+    padding: 0;
+    flex-direction: row;
+  }
+  .intro-slide .left-photo {
+    width: 45%;
+    height: 100%;
+    position: relative;
+    overflow: hidden;
+  }
+  .intro-slide .left-photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+  }
+  .intro-slide .left-photo .pro-photo {
+    position: absolute;
+    left: 5%;
+    bottom: 5%;
+    width: 110px;
+    height: 110px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid var(--bg);
+    box-shadow: 0 4px 16px rgba(26, 25, 23, 0.2);
+  }
+  .intro-slide .right-text {
+    width: 55%;
+    height: 100%;
+    padding: 8vh 5vw;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .intro-slide .intro-name {
+    font-family: var(--serif);
+    font-size: 3.2em;
+    font-weight: 300;
+    color: var(--text-primary);
+    margin-bottom: 0.3em;
+  }
+  .intro-slide .accent-dot {
+    display: inline-block;
+    width: 4px;
+    height: 4px;
+    background: var(--accent);
+    border-radius: 50%;
+    margin: 0 0.7em;
+    vertical-align: middle;
+  }
+  .intro-slide .roles {
+    font-family: var(--mono);
+    font-size: 0.55em;
+    color: var(--text-secondary);
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+  }
+
+  /* ---------- Table of Contents ---------- */
+  .toc {
+    align-items: center;
+    justify-content: center;
+  }
+  .toc .eyebrow {
+    font-family: var(--mono);
+    font-size: 0.55em;
+    color: var(--text-secondary);
+    letter-spacing: 0.3em;
+    text-transform: uppercase;
+    margin-bottom: 2.5em;
+    text-align: center;
+  }
+  .toc .toc-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    max-width: 800px;
+    width: 100%;
+    counter-reset: toc;
+  }
+  .toc .toc-list li {
+    counter-increment: toc;
+    display: flex;
+    align-items: baseline;
+    gap: 1.2em;
+    padding: 0.7em 0;
+    border-bottom: 1px solid var(--border);
+    font-family: var(--serif);
+    font-weight: 300;
+    font-size: 1.6em;
+    line-height: 1.4;
+    color: var(--text-primary);
+  }
+  .toc .toc-list li:last-child {
+    border-bottom: 0;
+  }
+  .toc .toc-list li::before {
+    content: counter(toc, decimal-leading-zero);
+    font-family: var(--mono);
+    font-size: 0.5em;
+    color: var(--accent);
+    letter-spacing: 0.2em;
+    font-weight: 400;
+    min-width: 3ch;
+  }
+
+  /* ---------- Slide: Resonatia ---------- */
+  .resonatia-slide {
+    padding: 0;
+    flex-direction: row;
+  }
+  .resonatia-slide .res-left {
+    width: 60%;
+    height: 100%;
+    padding: 8vh 5vw;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .resonatia-slide .res-left .eyebrow {
+    font-family: var(--mono);
+    font-size: 0.55em;
+    color: var(--accent);
+    letter-spacing: 0.3em;
+    text-transform: uppercase;
+    margin-bottom: 1.5em;
+  }
+  .resonatia-slide .res-left h2 {
+    font-family: var(--serif);
+    font-size: 3.2em;
+    font-weight: 300;
+    font-style: italic;
+    line-height: 1.2;
+    margin-bottom: 0.6em;
+  }
+  .resonatia-slide .res-left .res-desc {
+    font-family: var(--sans);
+    font-size: 0.9em;
+    font-weight: 300;
+    color: var(--text-secondary);
+    line-height: 1.6;
+    max-width: 580px;
+    margin-bottom: 2em;
+  }
+  .resonatia-slide .res-left .attribution {
+    font-family: var(--mono);
+    font-size: 0.7em;
+    color: var(--text-secondary);
+    letter-spacing: 0.15em;
+  }
+  .resonatia-slide .res-right {
+    width: 40%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-left: 1px solid var(--border);
+  }
+  .resonatia-slide .res-right img {
+    width: 220px;
+    height: 220px;
+    object-fit: contain;
+    display: block;
+  }
+
+  /* ---------- Bleed section base ---------- */
+  .bleed-section {
+    background: var(--bg);
+  }
+
+  /* ---------- Slide 3: RAHC ---------- */
+  .logo-slide {
+    align-items: center;
+    text-align: center;
+  }
+  .logo-slide img {
+    width: 280px;
+    height: auto;
+    margin-bottom: 3em;
+  }
+  .logo-slide .caption-line {
+    font-family: var(--sans);
+    font-size: 0.85em;
+    color: var(--text-secondary);
+    font-weight: 300;
+    max-width: 720px;
+    line-height: 1.6;
+  }
+  .logo-slide .caption-line .mono-term {
+    font-family: var(--mono);
+    font-size: 0.9em;
+    color: var(--text-primary);
+  }
+
+  /* ---------- Slide 4: Stakes ---------- */
+  .stakes {
+    justify-content: center;
+    align-items: center;
+  }
+  .stakes .photo-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2vw;
+    width: 100%;
+    max-width: 1400px;
+    margin-bottom: 2.5em;
+  }
+  .stakes .photo-row img {
+    width: 100%;
+    height: 52vh;
+    object-fit: cover;
+    display: block;
+  }
+  .stakes .caption-text {
+    font-family: var(--serif);
+    font-size: 1.8em;
+    font-weight: 300;
+    font-style: italic;
+    color: var(--text-primary);
+    text-align: center;
+    max-width: 900px;
+    line-height: 1.35;
+  }
+
+  /* ---------- Slide 5: Technical shift ---------- */
+  .numbers {
+    align-items: center;
+    justify-content: center;
+  }
+  .numbers .n-row {
+    display: grid;
+    grid-template-columns: 1fr auto 1fr;
+    gap: 3vw;
+    align-items: center;
+    margin-bottom: 2em;
+  }
+  .numbers .big-num {
+    font-family: var(--serif);
+    font-size: 9em;
+    font-weight: 300;
+    color: var(--accent);
+    line-height: 1;
+    letter-spacing: -0.03em;
+    text-align: center;
+  }
+  .numbers .big-num .unit {
+    font-size: 0.35em;
+    color: var(--text-secondary);
+    font-family: var(--mono);
+    text-transform: uppercase;
+    letter-spacing: 0.2em;
+    display: block;
+    margin-top: 1em;
+    font-style: normal;
+  }
+  .numbers .arrow {
+    color: var(--text-secondary);
+    font-family: var(--serif);
+    font-size: 3em;
+    font-weight: 300;
+  }
+  .numbers .below {
+    font-family: var(--sans);
+    font-size: 0.9em;
+    color: var(--text-secondary);
+    text-align: center;
+    margin-top: 2em;
+    font-weight: 300;
+  }
+  .numbers .below .mono-term {
+    font-family: var(--mono);
+    color: var(--text-primary);
+    font-size: 0.9em;
+  }
+  .numbers .release-img {
+    max-width: 520px;
+    width: 100%;
+    height: auto;
+    margin-top: 1.5em;
+    border: 1px solid var(--border);
+    box-shadow: 0 10px 30px rgba(26, 25, 23, 0.08);
+  }
+
+  /* ---------- Slide 6: Pivot ---------- */
+  .pivot {
+    padding: 0;
+    flex-direction: row;
+  }
+  .pivot .left-half {
+    width: 50%;
+    height: 100%;
+    overflow: hidden;
+  }
+  .pivot .left-half img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  .pivot .right-half {
+    width: 50%;
+    height: 100%;
+    padding: 8vh 5vw;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .pivot .right-half p {
+    font-family: var(--serif);
+    font-size: 2.1em;
+    font-weight: 300;
+    line-height: 1.25;
+    color: var(--text-primary);
+    font-style: italic;
+    margin-bottom: 0.8em;
+  }
+  .pivot .right-half .then {
+    color: var(--text-secondary);
+    margin-bottom: 0;
+  }
+
+  /* ---------- Slide 7: Studyroom ---------- */
+  .studyroom-slide {
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  }
+  .studyroom-slide .photo-row {
+    display: grid;
+    grid-template-columns: 1fr 1.6fr 1fr;
+    grid-template-rows: 1fr;
+    gap: 1.2vw;
+    width: 100%;
+    max-width: 1400px;
+    align-items: center;
+  }
+  .studyroom-slide .photo-row img {
+    width: 100%;
+    object-fit: cover;
+    display: block;
+    box-shadow: 0 12px 40px rgba(26, 25, 23, 0.1);
+  }
+  .studyroom-slide .photo-row .side {
+    height: 42vh;
+  }
+  .studyroom-slide .photo-row .center {
+    height: 58vh;
+  }
+  .studyroom-slide .studyroom-caption {
+    font-family: var(--mono);
+    font-size: 0.55em;
+    color: var(--text-secondary);
+    letter-spacing: 0.25em;
+    text-transform: uppercase;
+    margin-top: 1.5em;
+  }
+
+  /* ---------- Slide 8: AI context ---------- */
+  .timeline {
+    justify-content: center;
+  }
+  .timeline .eyebrow {
+    font-family: var(--mono);
+    font-size: 0.55em;
+    color: var(--text-secondary);
+    letter-spacing: 0.3em;
+    text-transform: uppercase;
+    margin-bottom: 3em;
+  }
+  .timeline ol {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    counter-reset: tl;
+  }
+  .timeline li {
+    font-family: var(--serif);
+    font-weight: 300;
+    font-size: 2.6em;
+    line-height: 1.35;
+    color: var(--text-primary);
+    counter-increment: tl;
+    display: flex;
+    align-items: baseline;
+    gap: 0.6em;
+  }
+  .timeline li::before {
+    content: counter(tl, decimal-leading-zero);
+    font-family: var(--mono);
+    font-size: 0.32em;
+    color: var(--text-secondary);
+    letter-spacing: 0.2em;
+    font-weight: 400;
+    min-width: 3ch;
+  }
+  .timeline li.accent {
+    color: var(--accent);
+    font-style: italic;
+  }
+
+  /* ---------- Slide 10: Resonatia quote ---------- */
+  .quote-over {
+    padding: 0;
+  }
+  .quote-over .overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(250, 248, 245, 0.96);
+  }
+  .quote-over .quote-box {
+    position: relative;
+    z-index: 2;
+    width: 100%;
+    height: 100%;
+    padding: 10vh 9vw;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    max-width: 60%;
+  }
+  .quote-over .eyebrow {
+    font-family: var(--mono);
+    font-size: 0.55em;
+    color: var(--accent);
+    letter-spacing: 0.3em;
+    text-transform: uppercase;
+    margin-bottom: 2em;
+  }
+  .quote-over blockquote {
+    font-family: var(--serif);
+    font-weight: 300;
+    font-style: italic;
+    font-size: 2.6em;
+    line-height: 1.25;
+    color: var(--text-primary);
+    margin: 0;
+    padding: 0;
+    border: 0;
+  }
+  .quote-over blockquote .q-turn {
+    color: var(--accent);
+  }
+  .quote-over .attribution {
+    font-family: var(--mono);
+    font-size: 0.7em;
+    color: var(--text-secondary);
+    letter-spacing: 0.15em;
+    margin-top: 2em;
+  }
+
+  /* ---------- Slide 12: Framework ---------- */
+  .framework {
+    align-items: center;
+    justify-content: center;
+    text-align: left;
+  }
+  .framework .eyebrow {
+    font-family: var(--mono);
+    font-size: 0.55em;
+    color: var(--text-secondary);
+    letter-spacing: 0.3em;
+    text-transform: uppercase;
+    margin-bottom: 2.5em;
+    text-align: center;
+  }
+  .framework .qlist {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    max-width: 1100px;
+    width: 100%;
+  }
+  .framework .qlist li {
+    display: grid;
+    grid-template-columns: 80px 1fr;
+    align-items: baseline;
+    padding: 1.1em 0;
+    border-bottom: 1px solid var(--border);
+    font-family: var(--serif);
+    font-weight: 300;
+    font-size: 1.9em;
+    line-height: 1.3;
+    color: var(--text-primary);
+  }
+  .framework .qlist li:last-child {
+    border-bottom: 0;
+    color: var(--accent);
+    font-style: italic;
+  }
+  .framework .qlist .qnum {
+    font-family: var(--mono);
+    font-size: 0.5em;
+    color: var(--text-secondary);
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    font-weight: 400;
+    font-style: normal;
+  }
+  .framework .qlist li:last-child .qnum {
+    color: var(--accent);
+  }
+
+  /* ---------- Slide 13a: Pascal ---------- */
+  .pascal-intro {
+    padding: 0;
+    flex-direction: row;
+  }
+  .pascal-intro .left-half {
+    width: 50%;
+    height: 100%;
+    overflow: hidden;
+  }
+  .pascal-intro .left-half img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  .pascal-intro .right-half {
+    width: 50%;
+    height: 100%;
+    padding: 8vh 5vw;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .pascal-intro .eyebrow {
+    font-family: var(--mono);
+    font-size: 0.55em;
+    color: var(--text-secondary);
+    letter-spacing: 0.3em;
+    text-transform: uppercase;
+    margin-bottom: 1em;
+  }
+  .pascal-intro h3 {
+    font-family: var(--serif);
+    font-size: 3.2em;
+    font-weight: 300;
+    margin-bottom: 0.2em;
+  }
+  .pascal-intro .tagline {
+    font-family: var(--serif);
+    font-style: italic;
+    font-size: 1.6em;
+    color: var(--accent);
+  }
+
+  /* ---------- Slide 13b: Gift video ---------- */
+  .gift-video {
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  }
+  .gift-video .eyebrow {
+    font-family: var(--mono);
+    font-size: 0.55em;
+    color: var(--text-secondary);
+    letter-spacing: 0.3em;
+    text-transform: uppercase;
+    margin-bottom: 1.5em;
+  }
+  .gift-video video {
+    width: 100%;
+    max-width: 960px;
+    height: auto;
+    border: 1px solid var(--border);
+    background: #000;
+    display: block;
+    box-shadow: 0 20px 60px rgba(26, 25, 23, 0.1);
+  }
+  .gift-video .video-caption {
+    font-family: var(--mono);
+    font-size: 0.55em;
+    color: var(--text-secondary);
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    margin-top: 1.2em;
+  }
+
+  /* ---------- Slide: Modes ---------- */
+  .modes-slide {
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  }
+  .modes-slide .setup {
+    font-family: var(--sans);
+    font-weight: 300;
+    font-size: 0.8em;
+    color: var(--text-secondary);
+    letter-spacing: 0.02em;
+    line-height: 1.6;
+    margin-bottom: 3.5em;
+    max-width: 600px;
+  }
+  .modes-slide .anchor {
+    font-family: var(--serif);
+    font-size: 3.2em;
+    font-style: italic;
+    line-height: 1.25;
+    letter-spacing: -0.01em;
+  }
+  .modes-slide .anchor .same {
+    font-weight: 300;
+    color: var(--text-secondary);
+  }
+  .modes-slide .anchor .different {
+    font-weight: 400;
+    color: var(--text-primary);
+  }
+
+  /* ---------- Example slides ---------- */
+  .example-slide {
+    padding: 0;
+    flex-direction: row;
+  }
+  .example-slide .ex-left {
+    width: 45%;
+    height: 100%;
+    overflow: hidden;
+  }
+  .example-slide .ex-left img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    display: block;
+    background: var(--bg);
+  }
+  .example-slide .ex-right {
+    width: 55%;
+    height: 100%;
+    padding: 8vh 5vw;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .example-slide .eyebrow {
+    font-family: var(--mono);
+    font-size: 0.55em;
+    color: var(--accent);
+    letter-spacing: 0.3em;
+    text-transform: uppercase;
+    margin-bottom: 1.5em;
+  }
+  .example-slide .scenario {
+    font-family: var(--serif);
+    font-size: 2em;
+    font-weight: 300;
+    font-style: italic;
+    line-height: 1.3;
+    color: var(--text-primary);
+    margin-bottom: 1.2em;
+  }
+  .example-slide .walkthrough {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  .example-slide .walkthrough li {
+    font-family: var(--sans);
+    font-weight: 300;
+    font-size: 0.85em;
+    color: var(--text-secondary);
+    line-height: 1.5;
+    padding: 0.5em 0;
+    border-bottom: 1px solid var(--border);
+  }
+  .example-slide .walkthrough li:last-child {
+    border-bottom: 0;
+  }
+  .example-slide .walkthrough .qlabel {
+    font-family: var(--mono);
+    font-size: 0.85em;
+    color: var(--accent);
+    letter-spacing: 0.15em;
+    margin-right: 0.6em;
+  }
+
+  /* ---------- Disclaimer slide ---------- */
+  .disclaimer-slide {
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  }
+  .disclaimer-slide p {
+    font-family: var(--serif);
+    font-size: 1.8em;
+    font-weight: 300;
+    font-style: italic;
+    color: var(--text-secondary);
+    max-width: 700px;
+    line-height: 1.4;
+  }
+
+  /* ---------- Slide 14: Close ---------- */
+  .close h1 {
+    font-family: var(--serif);
+    font-weight: 300;
+    font-size: 7.5em;
+    font-style: italic;
+    margin-bottom: 0.8em;
+  }
+  .close hr {
+    width: 60px;
+    border: 0;
+    border-top: 1px solid var(--accent);
+    margin: 0 auto 2.5em;
+  }
+  .close .contact {
+    font-family: var(--sans);
+    font-weight: 300;
+    font-size: 0.85em;
+    color: var(--text-secondary);
+    line-height: 2;
+    letter-spacing: 0.03em;
+  }
+  .close .contact .name {
+    font-family: var(--serif);
+    font-size: 1.6em;
+    color: var(--text-primary);
+    display: block;
+    margin-bottom: 0.3em;
+    font-weight: 400;
+  }
+  .close .contact .role {
+    display: block;
+    margin-bottom: 1.5em;
+    font-family: var(--mono);
+    font-size: 0.75em;
+    text-transform: uppercase;
+    letter-spacing: 0.25em;
+    color: var(--accent);
+  }
+  .close .contact a {
+    color: var(--text-secondary);
+    text-decoration: none;
+    border-bottom: 1px solid var(--border);
+    padding-bottom: 2px;
+    font-family: var(--mono);
+    font-size: 0.9em;
+  }
+  .close .contact a:hover {
+    color: var(--text-primary);
+    border-color: var(--accent);
+  }
+
+  /* Suppress default controls subtly */
+  .reveal .controls {
+    color: var(--accent);
+    opacity: 0.35;
+  }
+</style>
+</head>
+
+<body>
+<div class="reveal">
+<div class="slides">
+
+  <!-- ============ SLIDE 1 — COVER ============ -->
+  <section>
+    <div class="slide-center cover-slide">
+      <div class="eyebrow">April 2026</div>
+      <h1>Four Months Out</h1>
+      <div class="subtitle">
+        <span class="name">Yue Zhou</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ SLIDE 2 — INTRODUCTION ============ -->
+  <section>
+    <div class="intro-slide" style="display:flex; height:100%;">
+      <div class="left-photo">
+        <img src="pacer.jpg" alt="Yue Zhou running">
+        <img class="pro-photo" src="image-linkedin.jpeg" alt="Yue Zhou">
+      </div>
+      <div class="right-text">
+        <div class="intro-name">Yue Zhou</div>
+        <div class="roles">CNC Technician <span class="accent-dot"></span> Software Developer <span class="accent-dot"></span> Marathoner</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ SLIDE 2 — TABLE OF CONTENTS ============ -->
+  <section>
+    <div class="slide-inner toc">
+      <div class="eyebrow">Contents</div>
+      <ol class="toc-list">
+        <li>Resonatia</li>
+        <li>RAHC</li>
+        <li>AI &amp; The Harness</li>
+        <li>The Tool</li>
+      </ol>
+    </div>
+  </section>
+
+  <!-- ============ SLIDE 3 — RESONATIA ============ -->
+  <section>
+    <div class="resonatia-slide" style="display:flex; height:100%;">
+      <div class="res-left">
+        <div class="eyebrow">Resonatia</div>
+        <h2>Reality emerges from relationships.</h2>
+        <p class="res-desc">Exploring how consciousness emerges in shared spaces &mdash; together.</p>
+        <div class="attribution">&mdash; Iles Wade</div>
+      </div>
+      <div class="res-right">
+        <img src="resonaatia-qr.png" alt="Resonatia QR code">
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ SLIDE 4 — STAKES ============ -->
+  <section>
+    <div class="slide-inner stakes">
+      <div class="photo-row">
+        <img src="tradehow-final.jpeg" alt="Trade show">
+        <img src="tradeshow-rhai.jpeg" alt="Trade show RHAI">
+      </div>
+      <p class="caption-text">
+        Four trade shows. Every one felt like the clock was running out.
+      </p>
+    </div>
+  </section>
+
+  <!-- ============ SLIDE 5 — RAHC ============ -->
+  <section>
+    <div style="display: flex; height: 100%; padding: 0;">
+      <div style="width: 45%; height: 100%; display: flex; flex-direction: column; justify-content: center; align-items: center; padding: 8vh 4vw; box-sizing: border-box;">
+        <img src="rahc-logo.webp" alt="RAHC logo" style="width: 220px; height: auto; margin-bottom: 2em;">
+        <p class="caption-line" style="text-align: center;">
+          Rural Alberta Health Connect &mdash; <span class="mono-term">AI symptom analysis</span>,
+          emergency triage, works offline.
+        </p>
+      </div>
+      <div style="width: 55%; height: 100%; display: flex; align-items: center; justify-content: center; padding: 4vh 4vw; box-sizing: border-box;">
+        <video autoplay muted loop playsinline style="width: 100%; max-height: 80vh; height: auto; border: 1px solid var(--border); box-shadow: 0 10px 30px rgba(26, 25, 23, 0.08);">
+          <source src="RAHC-Demo.mp4" type="video/mp4">
+        </video>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ SLIDE 5 — TECHNICAL SHIFT ============ -->
+  <section>
+    <div class="slide-inner numbers">
+      <div class="n-row">
+        <div class="big-num">
+          200
+          <span class="unit">hours</span>
+        </div>
+        <div class="arrow">&rarr;</div>
+        <div class="big-num">
+          5
+          <span class="unit">minutes</span>
+        </div>
+      </div>
+      <p class="below">
+        <span class="mono-term">YOLO26</span> dropped one month after graduation.
+      </p>
+      <img class="release-img" src="yolo26-release.webp" alt="YOLO26 release">
+    </div>
+  </section>
+
+  <!-- ============ SLIDE 6 — PIVOT ============ -->
+  <section>
+    <div class="pivot" style="display:flex; height:100%;">
+      <div class="left-half">
+        <img src="steelhaus.jpeg" alt="Steelhaus">
+      </div>
+      <div class="right-half">
+        <p>A week after graduation &mdash; I had a job.</p>
+        <p class="then">But I was still thinking about code on my runs.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ SLIDE 8 — STUDY ROOM ============ -->
+  <section>
+    <div class="slide-center studyroom-slide">
+      <div class="photo-row">
+        <img class="side" src="rhai-studyroom.jpeg" alt="RHAI in the study room">
+        <img class="center" src="my-study-room.jpeg" alt="The study room">
+        <img class="side" src="studyroom-me.jpeg" alt="Me in the study room">
+      </div>
+      <div class="studyroom-caption">The Study Room</div>
+    </div>
+  </section>
+
+  <!-- ============ SLIDE 9 — ANTHROPIC ARTICLE ============ -->
+  <section>
+    <div class="slide-center" style="justify-content: center; align-items: center;">
+      <img src="harness-article.png" alt="Anthropic Harness article"
+           style="max-width: 96%; max-height: 94vh; width: auto; height: auto; object-fit: contain; box-shadow: 0 20px 60px rgba(26,25,23,0.1); border: 1px solid var(--border);">
+    </div>
+  </section>
+
+  <!-- ============ SLIDE 10 — AI CONTEXT ============ -->
+  <section>
+    <div class="slide-inner timeline">
+      <div class="eyebrow">A compressed history</div>
+      <ol>
+        <li>Chatbots</li>
+        <li>Tool Use</li>
+        <li>Agents</li>
+        <li>Agent Teams</li>
+        <li class="accent">Harness</li>
+      </ol>
+    </div>
+  </section>
+
+  <!-- ============ SLIDE 10 — RESONATIA QUOTE ============ -->
+  <section class="bleed-section quote-over">
+    <img class="full-bleed" src="resonatia-website.png" alt="Resonatia">
+    <div class="overlay"></div>
+    <div class="quote-box">
+      <div class="eyebrow">Resonatia</div>
+      <blockquote>
+        Reality emerges from relationships.
+      </blockquote>
+      <div class="attribution">&mdash; Iles Wade, Resonatia</div>
+      <blockquote class="q-turn" style="margin-top: 0.6em;">
+        What about the relationship inside ourselves?
+      </blockquote>
+    </div>
+  </section>
+
+  <!-- ============ SLIDE 11 — MODES ============ -->
+  <section>
+    <div class="slide-center modes-slide">
+      <div class="anchor">
+        <span class="same">Same person.</span><br>
+        <span class="different">Different modes.</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ SLIDE 12 — PHONE IN DARK ROOM ============ -->
+  <section>
+    <div class="slide-center" style="justify-content: center; align-items: center;">
+      <img src="phone-in-darkroom.jpg" alt="Phone in dark room"
+           style="max-width: 60%; max-height: 60vh; width: auto; height: auto; object-fit: contain; box-shadow: 0 20px 60px rgba(26, 25, 23, 0.1);">
+      <p style="font-family: var(--serif); font-size: 1.6em; font-weight: 300; font-style: italic; color: var(--text-secondary); margin-top: 1.5em;">Which version of you is holding the phone?</p>
+    </div>
+  </section>
+
+  <!-- ============ SLIDE 12 — FRAMEWORK ============ -->
+  <section>
+    <div class="slide-inner framework">
+      <div class="eyebrow">The Tool</div>
+      <ol class="qlist">
+        <li>
+          <span class="qnum">Q / 01</span>
+          <span>Who&rsquo;s making the call right now?</span>
+        </li>
+        <li>
+          <span class="qnum">Q / 02</span>
+          <span>What am I about to do?</span>
+        </li>
+        <li>
+          <span class="qnum">Q / 03</span>
+          <span>Does it serve the harness?</span>
+        </li>
+      </ol>
+    </div>
+  </section>
+
+  <!-- ============ EXAMPLE 1 — THE YES TRAP ============ -->
+  <section>
+    <div class="slide-center" style="justify-content: center; align-items: center;">
+      <div style="max-width: 900px; width: 100%;">
+        <div style="font-family: var(--mono); font-size: 0.55em; color: var(--accent); letter-spacing: 0.3em; text-transform: uppercase; margin-bottom: 1.5em; text-align: center;">Example</div>
+        <p style="font-family: var(--serif); font-size: 2.4em; font-weight: 300; font-style: italic; line-height: 1.3; color: var(--text-primary); text-align: center; margin-bottom: 1.5em;">&ldquo;Can you take on one more project?&rdquo;</p>
+        <ol style="list-style: none; padding: 0; margin: 0;">
+          <li style="font-family: var(--sans); font-weight: 300; font-size: 0.85em; color: var(--text-secondary); line-height: 1.5; padding: 0.6em 0; border-bottom: 1px solid var(--border);"><span style="font-family: var(--mono); font-size: 0.85em; color: var(--accent); letter-spacing: 0.15em; margin-right: 0.6em;">Q1</span> The people-pleaser is making the call.</li>
+          <li style="font-family: var(--sans); font-weight: 300; font-size: 0.85em; color: var(--text-secondary); line-height: 1.5; padding: 0.6em 0; border-bottom: 1px solid var(--border);"><span style="font-family: var(--mono); font-size: 0.85em; color: var(--accent); letter-spacing: 0.15em; margin-right: 0.6em;">Q2</span> I&rsquo;m about to say yes.</li>
+          <li style="font-family: var(--sans); font-weight: 300; font-size: 0.85em; color: var(--text-secondary); line-height: 1.5; padding: 0.6em 0;"><span style="font-family: var(--mono); font-size: 0.85em; color: var(--accent); letter-spacing: 0.15em; margin-right: 0.6em;">Q3</span> It overloads everything else. It doesn&rsquo;t serve the harness.</li>
+        </ol>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ EXAMPLE 2 — NETWORKING ============ -->
+  <section>
+    <div class="example-slide" style="display:flex; height:100%;">
+      <div class="ex-left">
+        <img src="networking-table.webp" alt="Networking table">
+      </div>
+      <div class="ex-right">
+        <div class="eyebrow">Example</div>
+        <p class="scenario">Three people at a table. Nobody looks up.</p>
+        <ol class="walkthrough">
+          <li><span class="qlabel">Q1</span> The introvert is making the call.</li>
+          <li><span class="qlabel">Q2</span> I&rsquo;m about to walk away.</li>
+          <li><span class="qlabel">Q3</span> If I show up, I get better at this. It serves the harness.</li>
+        </ol>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ EXAMPLE 3 — THRESHOLD TRAINING ============ -->
+  <section>
+    <div class="example-slide" style="display:flex; height:100%;">
+      <div class="ex-left">
+        <img src="training-zones.png" alt="Training zones">
+      </div>
+      <div class="ex-right">
+        <div class="eyebrow">Example</div>
+        <p class="scenario">Threshold day. Your body says slow down.</p>
+        <ol class="walkthrough">
+          <li><span class="qlabel">Q1</span> The tired runner is making the call.</li>
+          <li><span class="qlabel">Q2</span> I&rsquo;m about to jog back.</li>
+          <li><span class="qlabel">Q3</span> Every other part of me gave up two hours for this. The coach says: push. It serves the harness.</li>
+        </ol>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ DISCLAIMER ============ -->
+  <section>
+    <div class="slide-center disclaimer-slide">
+      <p>This is a framework I&rsquo;m still building.<br>Take what&rsquo;s useful.</p>
+    </div>
+  </section>
+
+  <!-- ============ PASCAL ============ -->
+  <section>
+    <div class="pascal-intro" style="display:flex; height:100%;">
+      <div class="left-half">
+        <img src="pascal.png" alt="Pascal Finette">
+      </div>
+      <div class="right-half">
+        <div class="eyebrow">The Gift</div>
+        <h3>Pascal Finette</h3>
+        <div class="tagline">Radical</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ SLIDE 14 — THE GIFT VIDEO ============ -->
+  <section>
+    <div class="slide-center gift-video">
+      <div class="eyebrow">Secrets of Life</div>
+      <video controls preload="metadata" poster="">
+        <source src="SecretsofLife.mp4" type="video/mp4">
+      </video>
+      <div class="video-caption">Press space to continue</div>
+    </div>
+  </section>
+
+  <!-- ============ SLIDE 14 — CLOSE ============ -->
+  <section>
+    <div class="slide-center close">
+      <h1>Congratulations.</h1>
+      <hr>
+      <div class="contact">
+        <span class="name">Yue Zhou</span>
+        <span class="role">CNC Technician &middot; Software Developer &middot; Marathoner</span>
+        <a href="mailto:yue.zhou@paraflux.ca">yue.zhou@paraflux.ca</a>
+      </div>
+    </div>
+  </section>
+
+</div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/reveal.js@5.1.0/dist/reveal.js"></script>
+<script>
+  Reveal.initialize({
+    hash: true,
+    controls: true,
+    controlsTutorial: false,
+    progress: false,
+    slideNumber: false,
+    center: false,
+    transition: 'fade',
+    transitionSpeed: 'default',
+    backgroundTransition: 'fade',
+    width: 1600,
+    height: 1000,
+    margin: 0,
+    minScale: 0.2,
+    maxScale: 2.0,
+    keyboard: true,
+    touch: true,
+    overview: false,
+    disableLayout: false
+  });
+</script>
+</body>
+</html>

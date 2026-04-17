@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Presenter Notes — Four Months Out</title>
+<style>
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    max-width: 720px;
+    margin: 3em auto;
+    padding: 0 2em;
+    color: #1a1917;
+    line-height: 1.7;
+    background: #faf8f5;
+  }
+  h1 {
+    font-size: 1.8em;
+    font-weight: 300;
+    margin-bottom: 0.5em;
+  }
+  h2 {
+    font-size: 1.1em;
+    font-weight: 600;
+    margin-top: 2.5em;
+    margin-bottom: 0.3em;
+    color: #c4956a;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+  }
+  h3 {
+    font-size: 0.95em;
+    font-weight: 600;
+    margin-top: 1.5em;
+    margin-bottom: 0.3em;
+  }
+  p, li {
+    font-size: 0.95em;
+    color: #3a3835;
+  }
+  ul {
+    padding-left: 1.2em;
+  }
+  li {
+    margin-bottom: 0.4em;
+  }
+  .key {
+    background: #f0ece6;
+    padding: 0.15em 0.5em;
+    border-radius: 3px;
+    font-weight: 500;
+    font-size: 0.9em;
+  }
+  hr {
+    border: none;
+    border-top: 1px solid rgba(196, 149, 106, 0.3);
+    margin: 2em 0;
+  }
+  .slide-num {
+    font-family: ui-monospace, monospace;
+    font-size: 0.8em;
+    color: #6b665c;
+  }
+</style>
+</head>
+<body>
+
+<h1>Presenter Notes</h1>
+<p>Four Months Out — Yue Zhou</p>
+
+<hr>
+
+<h2>Slide 0 — Cover</h2>
+<p>Clean open. Let it breathe. Don't rush past this.</p>
+
+<h2>Slide 1 — Introduction</h2>
+<p>Pacer image shows who I am. Three roles: CNC Technician, Software Developer, Marathoner.</p>
+
+<h2>Slide 2 — Table of Contents</h2>
+<p>Four sections: Resonatia, RAHC, AI & The Harness, The Tool.</p>
+
+<h2>Slide 3 — Resonatia</h2>
+<p>Iles Wade's project. "Reality emerges from relationships." QR code for audience to scan.</p>
+
+<h2>Slides 4–5 — Trade Shows & RAHC</h2>
+<p>Four trade shows. RAHC demo plays on mute. Rural Alberta Health Connect — AI symptom analysis, triage, works offline.</p>
+
+<h2>Slide 6 — Technical Shift (YOLO26)</h2>
+<p>200 hours of manual work → 5 minutes. YOLO26 dropped one month after graduation. The field moves fast.</p>
+
+<h2>Slide 7 — The Pivot</h2>
+<p>Steelhaus. Got a job a week after graduation. But still thinking about code on runs.</p>
+
+<h2>Slide 8 — Study Room</h2>
+<p>Three photos. The space where the real work happens.</p>
+
+<h2>Slide 9 — Anthropic Article</h2>
+<p>The harness article. Let the image speak — don't over-explain. This sets up the next slide.</p>
+
+<h2>Slide 10 — AI Context (The Progression)</h2>
+<h3>The five layers:</h3>
+<ul>
+  <li><span class="key">Chatbots</span> — model can only talk</li>
+  <li><span class="key">Tool Use</span> — model can do things (APIs, files, shell). MCP is how the harness plugs tools in — "USB-C for AI tools"</li>
+  <li><span class="key">Agents</span> — model + tools + autonomous loop. They decide what to do next on their own</li>
+  <li><span class="key">Agent Teams</span> — multiple agents coordinating. The <em>what</em> and <em>why</em> (planning, reasoning)</li>
+  <li><span class="key">Harness</span> — everything surrounding the model. The <em>how</em> and <em>where</em> (executing tools, sandboxing, state)</li>
+</ul>
+
+<h3>Harness = Safe + Reliable</h3>
+<ul>
+  <li><strong>Safe (can't do)</strong> — controls what agents are NOT allowed to do. Can't delete production database, can't overspend, can't access files outside sandbox</li>
+  <li><strong>Reliable (must do)</strong> — controls what agents MUST do. Retry on failure, preserve state, validate outputs</li>
+</ul>
+<p>Analogy: agents are the workers. The harness is the building — walls, safety equipment, locked tool cabinets, fire exits.</p>
+
+<h2>Slide 11 — Resonatia Quote</h2>
+<p>"Reality emerges from relationships." — Iles Wade. Then my question: "What about the relationship inside ourselves?"</p>
+
+<h2>Slide 12 — Same Person. Different Modes.</h2>
+<p>Let this sit. The audience needs a moment. You have different modes — not different people. Same person.</p>
+
+<h2>Slide 13 — Phone in Dark Room</h2>
+<p>"Which version of you is holding the phone?" Pause here. Let them feel it.</p>
+
+<h2>Slide 14 — The Tool (Three Questions)</h2>
+<h3>The three questions:</h3>
+<ul>
+  <li><span class="key">Q1</span> Who's making the call right now?</li>
+  <li><span class="key">Q2</span> What am I about to do?</li>
+  <li><span class="key">Q3</span> Does it serve the harness?</li>
+</ul>
+<p>This is one tool within the self-harness system. You are the harness. Your modes are the agents. This tool gives you awareness of which one is driving.</p>
+<p>It's not about making the "right" call — it's about being aware of who's making it. You have a feedback loop, like an agent's while loop. If it doesn't serve the goal, you'll know, and you can make a different call next time.</p>
+
+<h2>Slide 15 — Example: The Yes Trap</h2>
+<ul>
+  <li>Q1: The people-pleaser is making the call</li>
+  <li>Q2: I'm about to say yes</li>
+  <li>Q3: It overloads everything else. Doesn't serve the harness</li>
+</ul>
+
+<h2>Slide 16 — Example: Networking</h2>
+<p>Three people at a table. Nobody looks up. That's terrifying for introverts.</p>
+<ul>
+  <li>Q1: The introvert is making the call</li>
+  <li>Q2: I'm about to walk away</li>
+  <li>Q3: If I show up, I get better at this. It serves the harness</li>
+</ul>
+<p>Not saying you have to fake being someone you're not. Just an example of checking who's deciding.</p>
+
+<h2>Slide 17 — Example: Threshold Training</h2>
+<p>Threshold = push heart rate to sustainable limit for 30+ min. Most uncomfortable training a runner can do.</p>
+<ul>
+  <li>Q1: The tired runner is making the call</li>
+  <li>Q2: I'm about to jog back</li>
+  <li>Q3: Every other part of me gave up two hours for this — the coder, the worker, the one who could be enjoying life. The coach says: push. It serves the harness</li>
+</ul>
+
+<h2>Slide 18 — Disclaimer</h2>
+<p>"This is a framework I'm still building. Take what's useful." Keep it humble. This is an invitation, not a lecture.</p>
+
+<h2>Slides 19–20 — Pascal & Gift Video</h2>
+<p>Pascal Finette. Radical. Let the video play — Secrets of Life.</p>
+
+<h2>Slide 21 — Close</h2>
+<p>Congratulations. yue.zhou@paraflux.ca</p>
+
+</body>
+</html>
